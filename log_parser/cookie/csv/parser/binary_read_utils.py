@@ -2,6 +2,13 @@ import os
 
 
 def move_pointer_to_line_start(fh, no_lines=1):
+    """
+    This Function moves file pointer to request number of lines backwards position
+    Always points the position to starting of the line
+    :param fh: File handle pointer
+    :param no_lines: number of lines it needs to read
+    :return: if successfully able to move pointer to requested position
+    """
     p = fh.tell()
     f = 0
     while p > 0:
@@ -15,7 +22,19 @@ def move_pointer_to_line_start(fh, no_lines=1):
     return False
 
 
-def move_pointer_to_date(fh,req_date,get_cookie):
+def move_pointer_to_date(fh, req_date, get_cookie):
+    """
+    This is the core function which will make the search faster
+    This is the implementation of the binary search to identifying the starting cookie information of the given day
+    among all the available days and move the file handler to the starting position to read
+
+    Since This is using binary search time complexity of this method is O(log n) to find the position
+
+    :param fh: file handle while reading in binary form
+    :param req_date: date
+    :param get_cookie: function to get cookie object to support multiple formats
+    :return: None
+    """
     fh.seek(0)
     fh.readline()
     start = fh.tell()
@@ -26,7 +45,7 @@ def move_pointer_to_date(fh,req_date,get_cookie):
         fh.seek(start)
         return
     low = start
-    fh.seek(0,os.SEEK_END)
+    fh.seek(0, os.SEEK_END)
     high = fh.tell()
     while low <= high:
         if low == high:
