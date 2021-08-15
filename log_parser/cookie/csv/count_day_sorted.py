@@ -6,11 +6,10 @@ def count_day(file_name, day):
     req_date = day.date()
     with open(file_name, "rb") as fh:
         move_pointer_to_date(fh, req_date, get_cookie)
-        c = 0
+        count_frequency = {}
         while True:
             cookie = get_cookie(fh)
-            print(cookie)
             if not cookie or cookie.timestamp.date() != req_date:
                 break
-            c += 1
-        return c
+            count_frequency[cookie.name] = count_frequency.get(cookie.name, 0) + 1
+        return count_frequency
