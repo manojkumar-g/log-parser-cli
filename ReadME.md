@@ -3,20 +3,24 @@ This repository is implementation Most Active Cookie parsing technique.
 
 ## Installation
 ####prerequisites:
+To install and use this cli you need python version greater than 3.8 and pip3 for installing the 
+dependencies for cli, logging and testing tools.
 ```bash
-python >=3.8
-pip3
+$ python >= 3.8
+$ pip3
 ```
 
 ####Install from Source:
+Download and extract the source file
 ```bash
-$ pip install --editable .
+$ cd log-parser-cli/
+$ python setup.py install
 ```
 ## Most Active Cookie
 This Algorithm is for process the log file and return the most active cookie for a specific day. 
 Please include a -f parameter for the filename to process and a -d parameter to specify the date.
 
-### Assumptions:
+#### Assumptions:
 * If multiple cookies meet that criteria, please return all of them on separate lines.
 * You can assume -d parameter takes date in UTC time zone.
 * You have enough memory to store the contents of the whole file.
