@@ -12,6 +12,11 @@ $ pip3
 ```
 
 #### Install from Source:
+Clone with Git:
+```bash
+$ git clone https://github.com/manojkumar-g/log-parser-cli.git
+```
+
 Download and extract the source file
 ```bash
 $ cd log-parser-cli/
