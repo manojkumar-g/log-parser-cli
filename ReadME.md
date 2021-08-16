@@ -32,7 +32,7 @@ Please include a -f parameter for the filename to process and a -d parameter to 
 * You have enough memory to store the contents of the whole file.
 * Cookies in the log file are sorted by timestamp (most recent occurrence is the first line of the file).
 
-###Usage
+### Usage
 ```bash
 $ log_parser cookie most_active -f [filename] -d [date]
 ```
