@@ -17,7 +17,9 @@ Clone with Git:
 $ git clone https://github.com/manojkumar-g/log-parser-cli.git
 ```
 
-Download and extract the source file
+Or Download and extract the source file
+
+**installing**
 ```bash
 $ cd log-parser-cli/
 $ python setup.py install
