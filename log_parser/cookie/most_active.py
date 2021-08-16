@@ -16,6 +16,8 @@ def most_active_cookie(file_name, day):
         cookie_count_by_day = csv_count(file_name, day)
     else:
         raise Exception("[Error] Unsupported Format.")
+    if not len(cookie_count_by_day):
+        return []
     most_active_cookie_count = max(cookie_count_by_day.values())
     solution = []
     for key, value in cookie_count_by_day.items():
