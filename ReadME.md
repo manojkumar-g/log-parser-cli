@@ -1,9 +1,9 @@
 # Log-Parser
 This repository is implementation Most Active Cookie parsing technique.
 
-## Installation
+**Installation:**
 
-#### prerequisites:
+**prerequisites:**
 To install and use this cli you need python version greater than 3.8 and pip3 for installing the 
 dependencies for cli, logging and testing tools.
 ```bash
@@ -11,13 +11,13 @@ $ python >= 3.8
 $ pip3
 ```
 
-####Install from Source:
+#### Install from Source:
 Download and extract the source file
 ```bash
 $ cd log-parser-cli/
 $ python setup.py install
 ```
-####Testing:
+#### Testing:
 ```bash
 $ cd log-parser-cli/
 $ pytest tests -q
